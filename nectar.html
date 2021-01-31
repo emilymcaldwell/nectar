@@ -385,6 +385,9 @@ div[photoset-layout] {
     margin:0;
     padding:0;
     list-style:none;
+    {block:ifRoundedPosts}
+    border-radius:5px;
+    {/block:ifRoundedPosts}
 }
 
 .label {
@@ -400,7 +403,18 @@ div[photoset-layout] {
     padding:18px 25px;
 }
 
-.line:last-of-type { border:0; }
+.line:first-of-type {
+    {block:ifRoundedPosts}
+    border-radius:5px 5px 0 0;
+    {/block:ifRoundedPosts}
+}
+
+.line:last-of-type { 
+    border:0; 
+    {block:ifRoundedPosts}
+    border-radius:0 0 5px 5px;
+    {/block:ifRoundedPosts}
+}
 
 /* quotes */
 .quote {
