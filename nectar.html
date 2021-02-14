@@ -248,7 +248,7 @@ a:hover {
 blockquote { 
     border-left:1px solid {color:borders};
     margin:16px 0;
-    padding-left:10px;
+    padding-left:18px;
 }
 
 small, big, sub, pre {
@@ -380,6 +380,13 @@ div[photoset-layout] {
     text-transform:lowercase;
 }
 
+/* video */
+.tmblr-full > video {
+    {block:ifRoundedPosts}
+    border-radius:5px;
+    {/block:ifRoundedPosts}
+}
+
 /* chat */
 .chat {
     margin:0;
@@ -468,7 +475,7 @@ div[photoset-layout] {
 /* captions */
 .caption { list-style-type:none;margin:15px 0 0; padding:18px 25px 8px; background-color:{color:captions}; {block:ifRoundedPosts}border-radius:5px;{/block:ifRoundedPosts} }
 .caption:first-of-type { border:none; }
-.comment { margin:-10px 0 0 0;  }
+.comment { margin:0;  }
 .comment a { border-bottom:1px solid {color:accent}; margin-right:2px; }
 .user { font-weight:bold }
 a.user { color:{color:text}; }
@@ -510,7 +517,7 @@ a.user:hover { color:{color:accent}; }
 /* notes */
 ol.notes { padding:0; display:block; }
 .notes img { display:none; }
-li.note { display:block; margin:7px 0 7px 20px; width:100%; }
+li.note { display:block; margin:8px 0 8px 15px; width:100%; }
 li.note blockquote { padding:0 0 0 10px; margin:0 0 0 10px; line-height:1.5em; }
 a.more_notes_link,.notes_loading { color:#000; text-transform:lowercase; font-weight:bold; text-align:left!important; }
 
@@ -755,7 +762,7 @@ width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
 {/block:RebloggedFrom}
 {block:NotReblog}
     <li class="caption">
-        <div class="comment">{body}</div>
+        <div class="comment" style="margin-top:-10px;">{body}</div>
     </li>
 {/block:NotReblog}
 {/block:Text}
