@@ -304,7 +304,7 @@ ol {max-width: 100%; list-style-type: decimal-leading-zero; margin-left:-15px; }
 #description { margin-bottom:15px; }
 
 /* posts */
-.title { text-transform:uppercase; font-weight:bold; font-size:0.9em; margin-bottom:-5px; }
+.title { color:{color:title}; text-transform:uppercase; font-weight:bold; font-size:0.9em; margin-bottom:-5px; }
 
 /* photosets */
 [photoset-layout] {
@@ -499,7 +499,7 @@ a.user:hover { color:{color:accent}; }
 
 .pinned-post {
     background-color:{color:captions};
-    padding:6px 5px 4px 5px;
+    padding:5.5px 5px;
     border-radius:3px;
     {block:ifRoundedPosts}
     border-radius:5px;
@@ -520,7 +520,7 @@ ol.notes { padding:0; display:block; }
 .notes img { display:none; }
 li.note { display:block; margin:8px 0 8px 15px; width:100%; }
 li.note blockquote { padding:0 0 0 10px; margin:0 0 0 10px; line-height:1.5em; }
-a.more_notes_link,.notes_loading { color:#000; text-transform:lowercase; font-weight:bold; text-align:left!important; }
+a.more_notes_link,.notes_loading { color:{color:title}; text-transform:uppercase; font-weight:bold; font-size:0.9em; text-align:left!important; }
 
 .more_notes_link,.notes_loading {
     display:inline-block;
@@ -597,7 +597,7 @@ footer a {
      
     nav a {
         display:inline-block;
-        margin:7px 4px;
+        margin:7px;
         border:0;
     }
     
@@ -855,7 +855,7 @@ width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
 {block:Date}
 <div class="when">
     {block:PinnedPostLabel}
-<span class="pinned-post" title="pinned post"><i class="oi oi-pin"></i></span>
+<span class="pinned-post" title="pinned post"><i class="oi oi-map-marker"></i></span>
 {/block:PinnedPostLabel}
     {block:NoteCount}
     <span style="margin-right:10px;"><i class="oi oi-bookmark"></i><a href="{Permalink}" class="notecount">{NoteCount} notes</a></span>
