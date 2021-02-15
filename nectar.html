@@ -222,6 +222,7 @@ body {
     font-family:'{text:google font}', sans-serif;
     font-size:{text:font size}px;
     line-height:2em;
+    letter-spacing:0.5px;
     background:{color:background};
     color:{color:text};
     margin:0;
@@ -298,7 +299,7 @@ ol {max-width: 100%; list-style-type: decimal-leading-zero; margin-left:-15px; }
 
 #blogtitle { font-size:1.3em; font-family:'{text:title font}', sans-serif; line-height:1.3em; margin-bottom:15px; border:0; color:{color:title}; } 
 #blogtitle a { color:{color:title}; }
-#blogtitle a:hover { color:{color:accent}; }
+#blogtitle a:hover { color:{color:text}; }
  
 #description { margin-bottom:15px; }
 
@@ -692,7 +693,8 @@ footer a {
     right:15px; 
     line-height:1em; 
     padding:6px 5px 4px 5px; 
-    background:{color:background}; 
+    background:{color:captions}; 
+    border-radius:5px;
 }
 
 .top {
@@ -702,7 +704,8 @@ footer a {
 	display:none;
 	line-height:1em;
 	padding:6px 5px 4px 5px; 
-    background:{color:background}; 
+    background:{color:captions}; 
+    border-radius:5px;
 }
 
 </style>
@@ -919,6 +922,6 @@ $(".time-ago").timeAgo({
 
 <a href="#" title="back to top" class="top"><i class="oi oi-arrow-up"></i></a>
 
-<div class="credit"><a href="https://wordbite.tumblr.com" title="nectar @ wordbite"><i class="oi oi-pill"></i></a></div>
+<div class="credit"><a href="https://wordbite.tumblr.com" title="nectar @ wordbite"><i class="oi oi-smile"></i></a></div>
 
 </html>
