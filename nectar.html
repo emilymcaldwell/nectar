@@ -499,7 +499,7 @@ a.user:hover { color:{color:accent}; }
 
 .pinned-post {
     background-color:{color:captions};
-    padding:5.5px 5px;
+    padding:6px;
     border-radius:3px;
     {block:ifRoundedPosts}
     border-radius:5px;
@@ -855,7 +855,7 @@ width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
 {block:Date}
 <div class="when">
     {block:PinnedPostLabel}
-<span class="pinned-post" title="pinned post"><i class="oi oi-map-marker"></i></span>
+<span class="pinned-post" title="pinned post"><i class="oi oi-pin"></i></span>
 {/block:PinnedPostLabel}
     {block:NoteCount}
     <span style="margin-right:10px;"><i class="oi oi-bookmark"></i><a href="{Permalink}" class="notecount">{NoteCount} notes</a></span>
