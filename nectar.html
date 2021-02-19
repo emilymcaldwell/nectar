@@ -60,7 +60,6 @@
 <link href="https://fonts.googleapis.com/css?family={text:Title Font}:700,600,500,400|{text:Google Font}:700,600,500,400|Karla" rel="stylesheet">
 
 <!-- photosets -->
-
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 
 <!-- scripts -->
@@ -268,20 +267,6 @@ hr {
 ul {max-width: 100%; list-style-type: circle; margin-left:-15px; }
 ol {max-width: 100%; list-style-type: decimal-leading-zero; margin-left:-15px; }
 
-/* body */
-.ph {
-    position:relative;
-    overflow:hidden;
-}
- 
-.ph img {
-    width:100%;
-    display:block;
-    {block:ifRoundedPosts}
-    border-radius:5px;
-    {/block:ifRoundedPosts}
-}
-
 /* sidebar */
 .icon {
     display:inline-block;
@@ -304,6 +289,19 @@ ol {max-width: 100%; list-style-type: decimal-leading-zero; margin-left:-15px; }
 #description { margin-bottom:15px; }
 
 /* posts */
+.ph {
+    position:relative;
+    overflow:hidden;
+}
+ 
+.ph img {
+    width:100%;
+    display:block;
+    {block:ifRoundedPosts}
+    border-radius:5px;
+    {/block:ifRoundedPosts}
+}
+
 .title { color:{color:title}; text-transform:uppercase; font-weight:bold; font-size:0.9em; margin-bottom:-5px; }
 
 /* photosets */
@@ -550,6 +548,7 @@ a.more_notes_link,.notes_loading { color:{color:title}; text-transform:uppercase
     margin-right:10px;
 }
 
+/* pagination */
 footer {
     display:flex;
     align-items:center;
