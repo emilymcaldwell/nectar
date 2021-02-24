@@ -481,33 +481,65 @@ a.user { color:{color:text}; }
 a.user:hover { color:{color:accent}; }
 
 /* permalinks */
-.when { display:block; line-height:1em; margin-top:15px; }
-.when .oi {
-    display:inline-block;
-    font-size:1.5em;
-    vertical-align:middle;
+.post-info {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:15px;
     color:{color:links};
 }
 
-.when a {
-    display:inline-block;
+.left .oi {
     vertical-align:middle;
-    margin-left:4px;
+    margin-right:5px;
 }
 
-.pinned-post {
-    background-color:{color:captions};
-    padding:6px;
-    border-radius:3px;
-    {block:ifRoundedPosts}
-    border-radius:5px;
-    {/block:ifRoundedPosts}
-    margin-right:10px;
+.date {
+    margin-left:12px;
 }
 
-.pinned-post .oi {
+.date:first-of-type {
+    margin-left:0;
+}
+
+.date a {
+    color:{color:links};
+}
+
+.date a:hover {
+    color:{color:accent};
+}
+
+.date .oi {
     font-size:1.3em;
-    color:{color:link};
+}
+
+.likeb {
+    position: relative;
+    display: inline-block;
+}
+ 
+.likeb .like_button iframe {
+    position: absolute;
+    cursor: help;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    opacity: 0;
+}
+
+.like_button iframe {width: 100% !important; height: 100% !important;}
+.likeb .liked + .actual-button {color: {color:accent};}
+
+.pinned-post { margin-bottom:-15px; font-weight:bold; }
+.pinned-post a {
+    color:{color:text};
+}
+
+.pinned-post a:hover {
+    color:{color:accent};
 }
 
 .tags { display:block; margin-top:5px; margin-left:-3px; line-height:2em; font-style:italic; }
@@ -852,19 +884,26 @@ width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
 {/block:Answer}
 
 {block:Date}
-<div class="when">
-    {block:PinnedPostLabel}
-<span class="pinned-post" title="pinned post"><i class="oi oi-pin"></i></span>
-{/block:PinnedPostLabel}
+{block:PinnedPostLabel}
+    <div class="pinned-post"><a href="{Permalink}" title="view post">pinned post</a></div>
+    {/block:PinnedPostLabel}
+<div class="post-info">
+    <div class="left">
     {block:NoteCount}
-    <span style="margin-right:10px;"><i class="oi oi-bookmark"></i><a href="{Permalink}" class="notecount">{NoteCount} notes</a></span>
+    <span class="date"><i class="oi oi-bookmark"></i><a href="{Permalink}" class="notecount">{NoteCount} notes</a></span>
     {/block:NoteCount}
-    <span><i class="oi oi-time"></i><a href="{Permalink}" class="time-ago">{Timestamp}</a></span>
-    <span style="float:right;"><a href="{ReblogURL}" title="reblog"><i class="oi oi-refresh"></i></a></span>
-    {block:hastags}
-        <span class="tags">{block:Tags}<a href="{TagUrl}">#{Tag}</a>{/block:Tags}</span>
-    {/block:hasTags}
+    <span class="date"><i class="oi oi-time"></i><a href="{Permalink}" class="time-ago">{Timestamp}</a></span>
+    </div>
+    <div class="right">
+        <span class="date"><a href="{ReblogURL}"><i class="oi oi-refresh"></i></a></span>
+    <span class="date"><a class="likeb" href="#">{LikeButton}<span class="actual-button"><i class="oi oi-heart"></i></span></a></span>
+    </div>
 </div>
+{block:HasTags}
+<div class="tags">
+   {block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}
+</div>
+{/block:HasTags}
 {/block:Date}
 
 </div>
