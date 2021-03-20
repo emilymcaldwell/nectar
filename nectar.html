@@ -63,7 +63,7 @@
 <link href="https://static.tumblr.com/0podkko/oDSpg7y88/photosets.css" rel="stylesheet">
 
 <!-- scripts -->
-<link href='https://static.tumblr.com/8pnyeus/sXxofi7lt/outicons.css' rel='stylesheet' type='text/css'>
+<link href='https://static.tumblr.com/m2fiocp/1fbqq9vgi/outicons.css' rel='stylesheet' type='text/css'>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -472,7 +472,7 @@ div[photoset-layout] {
 }
 
 /* captions */
-.caption { list-style-type:none;margin:15px 0 0; padding:18px 25px 8px; background-color:{color:captions}; {block:ifRoundedPosts}border-radius:5px;{/block:ifRoundedPosts} }
+.caption { list-style-type:none;margin:15px 0 0; padding:18px 25px 8px; background-color:{color:captions}; border-left:3px solid {color:accent}; {block:ifRoundedPosts}border-radius:5px;{/block:ifRoundedPosts} }
 .caption:first-of-type { border:none; }
 .comment { margin:0;  }
 .comment a { border-bottom:1px solid {color:accent}; margin-right:2px; }
@@ -490,8 +490,8 @@ a.user:hover { color:{color:accent}; }
 }
 
 .left .oi {
-    vertical-align:middle;
     margin-right:5px;
+    vertical-align:middle;
 }
 
 .date {
@@ -716,27 +716,16 @@ footer a {
 }
 
 /* credit */
-.credit .oi, .top .oi { font-size:20px; margin:0; color:{color:text}; }
+.credit .oi,.top .oi { font-size:20px; margin:0; }
+.top { left:1em; bottom:1em; display:none; }
+.credit { bottom:1em; right:1em; }
 
-.credit { 
+.top, .credit { 
     position:fixed; 
-    bottom:15px; 
-    right:15px; 
-    line-height:1em; 
-    padding:6px 5px 4px 5px; 
-    background:{color:captions}; 
-    border-radius:5px;
-}
-
-.top {
-    position:fixed;
-	left:15px;
-	bottom:15px;
-	display:none;
-	line-height:1em;
-	padding:6px 5px 4px 5px; 
-    background:{color:captions}; 
-    border-radius:5px;
+    line-height:1em;
+    padding:4px;
+    background-color:{color:captions};
+    border-radius:3px;
 }
 
 </style>
