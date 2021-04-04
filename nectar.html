@@ -37,6 +37,7 @@
 <meta name="select:Icon Shape" content="5px" title="rounded" />
 <meta name="select:Icon Shape" content="0px" title="square" />
 
+<meta name="if:Right Sidebar" content="" />
 <meta name="if:Hide Caption Icons" content="" />
 <meta name="if:Rounded Posts" content="" />
 
@@ -286,6 +287,9 @@ aside {
     margin-left:calc(-{text:margin} + -{text:sidebar width});
     margin-top:0;
     text-align:right;
+    {block:ifRightSidebar}
+    margin-left:calc({text:margin} + {text:post width});
+    {/block:ifRightSidebar}
 }
 
 /* SIDEBAR */
@@ -487,13 +491,14 @@ div[photoset-layout] {
     list-style-type:none;
     margin:2em 0 0;
     background:{color:captions};
-    padding: 1.4em 1.2em 0.3em 1.6em;
+    padding: 1.4em 1.2em 0.4em 1.8em;
     {block:ifRoundedPosts}
     border-radius:5px;
     {/block:ifRoundedPosts}
 }
-.comment a { border-bottom:1px solid {color:accent}; }
-.user { display: inline-block; vertical-align: middle; }
+
+.user { display:inline-block; vertical-align:middle; font-weight:bold; }
+a.user { color:{color:text}; }
 a.user:hover { color:{color:accent}; }
 .user-icon {
     {block:ifHideCaptionIcons}
